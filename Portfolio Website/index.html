@@ -1,0 +1,116 @@
+<!DOCTYPE html><!--USe the live server extension to check the results side by side-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY_PORTFOLIO_SITE</title>
+<!--linktag is used to link the font type a file and many more--><link rel="stylesheet" href="style.css"><!--rel provides the meta data infprmation to show what kind of relationship it is-->
+</head>
+<body>
+    <!--Nav-->
+    <nav>
+        <div class="left"><a href="index.html"><!-- / is used for home or the same site-->Asadullah Khan</a></div><!--for the name on top left side-->
+        <div class="right">
+            <!--GitHub-->
+            <a href="http://github.com" target="_blank" rel="noopener noreferror">
+                <i class="fa-brands fa-github"></i><!--So we are using the semantic tag i for adding icon to it..we can use semantic tags for other purposes by use of class..in that class we have to add some styling...like in our case fa is short form of fot awesome which will add the styling of the fa selected icon in it--></i><!-- i is used for italic or icon,-->
+                <span>Github</span>
+            </a>
+            <!--Linkedin-->
+            <a href="http://linkedin.com" target="_blank" rel="noopener noreferror">
+                <i class="fa-brands fa-linkedin"></i><!-- i is used for italic or icon,-->
+                <span>Linkedin</span>
+
+            <!--Email-->
+            <a href="mailto:bitf25m510@pucit.edu.pk" target="_blank">
+                <i class="fa-solid fa-envelope"></i><!-- i is used for italic or icon,-->
+                <span>Email</span></a>
+        </div><!--for the links to services like linkedin,github and email-->
+    </nav>
+    <main>
+        <!--Me-->
+        <section class="Me">
+            <div class="info">
+                <h2>Hello,Its Me(Asad) ...</h2>
+                <p>I am very excited to have my hands on experience on this briliant project.Thanks to all those who assign me this to make me able to do it.<br>Talking about me, I am passed out from Daanish School Chishtian and currently I am srudying BS in Informatin Technology</p><BR>
+                <div class="links">
+                    <!--Move to skills section-->
+                    <a href="#skills">
+                        <i class="fa-solid fa-code"></i>
+                        <span>SKILLS</span>
+                    </a>
+                    <!--Move to testimony section-->
+                    <a href="#Testimony">
+                        <i class="fa-solid fa-pen"></i>
+                        <span>TESTIMONY</span>
+                    </a>
+                    <!--Move to contacts section-->
+                    <a href="#contacts">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>CONTACTS</span>
+                    </a>
+
+                </div>
+            </div>
+            <div class="photo">
+                <img src="pic2.jpg" alt="profile Pic is here" width="600PX" height="600PX" style="border-radius: 50%;">
+            </div>
+
+        </section>
+        <!--skiils-->
+        <section id="skills" class="skill">
+            <h2>Skills</h2>
+            <div class="skillinfo">
+                I have the skills of various kinds in the field of Computer Science and other problem solving fields like maths and algorithms.But currently as per talking about my technical skills I have the skill of Given programming Languages and fields..
+            </div>
+            <div class="cells"><!--Div for the skills to show inside the cells-->
+                <div class="cell">
+                    <span>HTML</span>
+                </div>
+                    <div class="cell">
+                    <span>PYTHON</span>
+                </div>
+                    <div class="cell">
+                    <span>CSS</span>
+                </div>
+                    <div class="cell">
+                    <span>DSA</span>
+                </div>
+            </div>
+        </section>
+        <!--Testimony-->
+        <section id="Testimony" class="test">
+            <h2>Testimony</h2>
+            <div class="g">
+                <div class="p-details">
+                    <img src="pic.jpg" alt="Raffay Khan" width="400PX" height="400PX" style="border-radius: 50%;margin-bottom:10px;object-fit:cover;aspect: ratio 1px / 1px;">
+                    <h3>Raffay Khan:</h3>
+                    <p>My dear Mentor and Football Friend</p>
+                </div>
+                <div class="p-info">
+                    I clearly states that this is my student who is currently studying in pucit as my Junior.He has hands on experience on HTML and CSS.He is also expert in dealing with Microsoft Office.I am stating this after taken his viva,quizes and Lab tasks so many time.This Man can proved to be a good part in improving any organization. 
+                </div>
+            </div>
+        </section>
+        <!--Contact-->
+        <section id="contacts" class="contact">
+            <h2>Contacts</h2>
+            <div class="group">
+                <div class="cont"><p style="text-align: center;">You can contact me on any of the given contacts links.Or if you wants to meet me personally you can come to PUCIT.If you see any fault or suggestion in the website .please let me know.Your Review will be considerd worthy.Please fill the given form if you want anything from me. </p></div>
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+
+                    <label for="mail">Email</label>
+                    <input type="email" id="mail">
+
+                    <label for="msg">Message</label>
+                    <textarea id="msg"></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,292 @@
+/* the top level tag in css which is usually used forr declaring varriable*/
+:root{
+    --text-color:#1a1c20; /* a varriable begans with a prefix --*/
+    --link-color:#4a76ee;
+    --background-color:#eeeff1;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;/*calulates how an element width and height is calculated*/
+}
+html{
+    scroll-behavior: smooth;/*make the scrolling smooth*/
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;/*the comma(,) seperation indicates that i a type is not available then another willl be selected by default*/
+    background-color: var(--background-color);/*varriable color is used here*/
+}
+a{
+    color: var(--link-color);
+    text-decoration: none;/*changes the way a link appear when we placed the cursor on it..by default it is underlined*/
+}
+/* for navigation bar*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;/*along y-axis is 0 and x-axis is 50*/
+    height: 80px;/*height of nav,i m not using padding because i want a fix height*/
+    width: 100%;
+    align-items: center;
+}
+nav .left a{/*for a in left of nav*/
+    color: var(--text-color);
+    font-size: 22px;/*how big or small*/
+    font-weight:600;/*thickness*/
+    transition:0.3s ease-in-out;
+    margin: 1px;
+
+}
+nav .left a:hover{
+    background-color: black;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 10px;
+    
+}
+nav .right a{/*for a in left of nav*/
+    color: var(--text-color);
+    margin: 20px;
+    transition: 0.5 ease-in-out;
+    position: relative;
+}
+nav .right a:hover{
+    text-decoration: wavy;
+    background-color: #1a1c20;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 3px 3px;
+
+}
+nav .right a:last-child{/*Will select the last element which is Email*/
+    color: var(--background-color);
+    background-color: black;
+    padding: 5px 15px;/*will spread out the background color*/
+    border-radius: 5px;
+}
+nav .right a span{
+    margin-left: 5px;
+
+}
+/*Section 1*/
+.Me .info h2{
+    color: var(--text-color);
+    font-size: 50px;
+}
+p{
+    color: var(--text-color);
+}
+.Me{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;/*the gap between the two divs..love it*/
+    padding: 0 50px;
+    
+    margin: 50 0px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;/*Will seperate the next section from it*/    
+}
+@media(max-width:850px){
+    /*Section 1*/
+    .Me{
+        font-size: 35px;
+        flex-direction: column-reverse;/*will take the image to upside as coloumn wise whwn the size is reduced*/
+    }
+    /*section 3*/
+    .test h2{
+        text-align: center;
+    }
+    .test .g{
+        flex-direction: column;
+    }
+
+}   
+.ME .info{
+    flex: 5;/*The most important part which decides how much part of total div will it takes.. like in this case 5 out of 7th part will be taken by this section*/
+}
+.Me .info .links a{
+    display: inline-block; /*It will attach each tag inside the individual a ..like in our case the icon and its text will not be seperated if we reduce the size of our browser*/
+    border: 2px solid var(--link-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease-in-out;/*decide how long will it takes for the css pseudo class to apply...also other things..like smooth changes..easing function*/
+}
+.Me .info .links a:hover{
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    border-radius: 50px;
+}
+.ME .photo{
+    flex: 2;
+    padding-left: 50PX;
+
+}
+/*Section 2*/ 
+.skill{
+    padding: 0px 50px;
+    margin-bottom: 50px;
+}
+.skill h2{
+    text-align: center;
+    margin: 20px;
+    font-size: 35px
+}
+.skill .skillinfo{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.skill .cells{
+    display: flex;
+    justify-content: center;/*So the boxes always remain in the center*/
+    flex-wrap: wrap;
+}
+.skill .cells .cell{
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border: 1.5px solid gray;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 200px;
+    font-weight: 600px;
+    text-decoration:solid;
+    object-fit: contain;
+    gap: 10px;
+    transition: 0.5s ease-in-out;
+}
+.skill .cells .cell span{
+    font-weight: 600;
+
+}
+.skill .cells .cell:hover{
+    background-color:green;
+    color:var(--background-color);
+    font-size: 20px;
+   
+}
+/*Section 3*/
+.test{
+    padding: 0 50px;
+    margin-bottom: 100px;
+    
+}
+.test h2{
+    font-size: 35px;
+    margin-bottom: 35px ;
+}
+.test .g{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.test .g .p-details{
+    margin-bottom: 10px;
+    align-items: center;
+    flex: 2;
+    text-align: center;
+    font-weight: 600;
+}
+.test .g .p-info{
+    flex: 8;
+}
+
+/*Section 4*/
+.contact{
+    padding: 0px 50px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.contact h2{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.contact .group{
+    display: flex;
+    
+    justify-content: space-between;
+    gap: 50px;
+    
+}
+.contact .group .cont{
+    flex: 3;
+    align-items: center;
+    
+}
+.contact .group form{
+    margin-top: 20px;
+    flex: 3;
+    display: flex;
+    flex-direction: column;/will show the each element inside the form in the form of coloumn
+}
+.contact .group form input,.contact .group form textarea{/*for input and text area both at the same time*/
+    font-family: sans-serif;
+    border: 2px solid blue;
+    margin-bottom: 10px;
+    background-color: transparent;
+    padding: 10px;
+    resize: none;/*The area of the input fields will not be changeable in te browser*/
+    outline: none;/*when we click on it then color will not change*/
+
+}
+.contact .group form input:hover{
+    border: 3px solid green;
+    border-radius: 5px;
+    background: lightcyan;
+}
+.contact .group form textarea:hover{
+    border: 3px solid green;
+    border-radius: 5px;
+    background: lightcyan;
+
+}
+.contact .group form button{
+    background-color:lightblue ;
+    height: 50px;
+    border: 3px lightblue;
+}
+.contact .group form button:hover{
+    background-color: blue;
+    color: white;
+    font-size: 30px;
+}
+@media(max-width: 600px){
+    /*nav bar when the device size is reduced..so we will reduce the padding of the nav bar */
+nav{
+    padding: 0px 20px;
+}
+nav .right a span{
+    display: none;
+}
+nav .right a{
+    font-size: 22px;/*will make the icons look bigger*/
+}
+nav .right a:last-child{
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 0px;
+}
+.Me{
+    padding: 0px 20px;
+}
+.Me .info h2{
+    font-size: 30px;
+}
+.ME .info p{
+    font-size: 20px;
+}
+.ME .photo img{
+    width: 130px;
+    height: 130px;
+}
+/*section 2*/
+.skill {
+    padding:0px 20px
+}
+
+}
